@@ -5,7 +5,7 @@ Bootstrap any new project with the **gstack + Superpowers + Compound Engineering
 ## Layout
 
 ```text
-boilerplate/
+claude-boilerplate/
 ├── README.md             # this file
 ├── new-project.ps1       # PowerShell bootstrap (Windows)
 ├── new-project.sh        # Bash bootstrap (macOS / Linux / Git Bash / WSL)
