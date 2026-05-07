@@ -1,0 +1,42 @@
+# Run these INSIDE Claude Code once /plugin is available.
+# Prerequisite: ENABLE_PLUGINS=1 in .claude/settings.local.json (or settings.json), then restart.
+#
+# TOKEN NOTE: every installed plugin loads its slash-command + skill descriptions into context
+# at session start. Pick what your project actually uses; comment out the rest.
+
+# === MARKETPLACES (one-time per machine — safe to run them all) ===
+/plugin marketplace add EveryInc/compound-engineering-plugin
+/plugin marketplace add obra/superpowers-marketplace
+/plugin marketplace add alirezarezvani/claude-skills
+
+# === CORE — install for any project ===
+/plugin install compound-engineering         # /ce-* commands (brainstorm, plan, work, code-review, compound)
+/plugin install superpowers@superpowers-marketplace
+
+# === BUSINESS / PRODUCT — install for product-led projects (B2B, SaaS) ===
+# /plugin install pm-skills@claude-code-skills
+# /plugin install business-growth-skills@claude-code-skills
+
+# === MARKETING / CONTENT — install for public-facing sites only ===
+# /plugin install marketing-skills@claude-code-skills
+# /plugin install content-creator@claude-code-skills
+
+# === SECURITY — install if NOT already covered by your `core` skill profile ===
+# Note: the `core` skills.txt profile already includes security-auditor agent.
+# Only install this if you want the additional plugin-level skill.
+# /plugin install skill-security-auditor@claude-code-skills
+
+# === Verify ===
+/plugin list
+
+
+# ---- gstack is NOT a plugin. Install it manually (Git Bash) ----
+#   git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git "$env:USERPROFILE\.claude\skills\gstack"
+#   cd "$env:USERPROFILE\.claude\skills\gstack" && bash ./setup
+#
+# ---- Real CE command names (corrects the blog post) ----
+# /ce:brainstorm  -> /ce-brainstorm
+# /ce:plan        -> /ce-plan
+# /ce:work        -> /ce-work
+# /ce:review      -> /ce-code-review
+# /ce:compound    -> /ce-compound

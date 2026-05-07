@@ -1,0 +1,34 @@
+# Local Claude Code overrides
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Skills/agents are project-scoped but big — keep out of git unless you want them shared
+# Comment out the next two lines to commit them with the team
+.claude/skills/
+.claude/agents/
+
+# Dependency managers
+node_modules/
+vendor/
+.venv/
+__pycache__/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# Build artefacts
+dist/
+build/
+.next/
+.turbo/
+coverage/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

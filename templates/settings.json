@@ -1,0 +1,27 @@
+{
+  "env": {
+    "ENABLE_PLUGINS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Glob(**)",
+      "Grep(**)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(npm test)",
+      "Bash(npm run lint)",
+      "Bash(npm run typecheck)",
+      "Bash(npm run build)",
+      "Bash(npx tsc:*)",
+      "Bash(pnpm test)",
+      "Bash(pnpm lint)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:code.claude.com)"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+# Skills + agents to install. Both install-skills.ps1 and install-skills.sh read this file.
+#
+# Format (3 columns, whitespace-separated):
+#   <category>  <kind>  <category/name>
+#
+#   category = core | dev | design | mobile | marketing | advanced | design-extra
+#   kind     = skill | agent
+#
+# Default install profile: core,dev,design (typical web/SaaS project)
+# Override:
+#   PowerShell : .\install-skills.ps1 -Categories core,mobile
+#   Bash       : ./install-skills.sh --categories all
+# Special token: `all` installs every category.
+#
+# Why categories: each installed skill loads its description into context at session
+# start. Fewer skills = less ambient context = more room for real work.
+#
+# Catalog: https://aitmpl.com  /  https://github.com/davila7/claude-code-templates
+
+# === core (always recommended — lean foundation) ===
+core skill development/code-reviewer
+core skill development/clean-code
+core skill development/brainstorming
+core skill development/senior-architect
+core agent security/security-auditor
+
+# === dev (general fullstack) ===
+dev skill development/senior-frontend
+dev skill development/senior-backend
+dev skill development/senior-fullstack
+dev skill development/senior-security
+dev agent development-team/frontend-developer
+dev agent development-team/backend-architect
+dev agent database/database-architect
+
+# === design (UI/UX-heavy projects) ===
+design skill creative-design/frontend-design
+design skill creative-design/ui-ux-pro-max
+design agent development-team/ui-ux-designer
+
+# === mobile (mobile apps) ===
+mobile skill creative-design/mobile-design
+mobile agent development-team/mobile-developer
+
+# === marketing (public sites, SEO, content) ===
+marketing skill business-marketing/seo-optimizer
+
+# === advanced (multi-team coordination, doc-heavy, long-context work) ===
+advanced skill development/using-superpowers
+advanced agent expert-advisors/multi-agent-coordinator
+advanced agent expert-advisors/documentation-expert
+advanced agent development-tools/context-manager
+
+# === design-extra (canvas / illustration heavy — large font payload) ===
+design-extra skill creative-design/canvas-design
