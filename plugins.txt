@@ -1,17 +1,23 @@
-# Run these INSIDE Claude Code once /plugin is available.
-# Prerequisite: ENABLE_PLUGINS=1 in .claude/settings.local.json (or settings.json), then restart.
+# The core marketplaces + plugins are PRE-DECLARED in .claude/settings.json
+# (extraKnownMarketplaces + enabledPlugins). On first launch Claude Code prompts
+# you once to TRUST each marketplace — click yes and the /ce-* and superpowers
+# commands are live. No manual /plugin marketplace add / /plugin install needed
+# for the core stack.
 #
-# TOKEN NOTE: every installed plugin loads its slash-command + skill descriptions into context
-# at session start. Pick what your project actually uses; comment out the rest.
+# This file is kept for the OPTIONAL plugins below. Uncomment and run the
+# /plugin lines inside Claude Code only for what your project actually uses.
+#
+# TOKEN NOTE: every installed plugin loads its slash-command + skill descriptions
+# into context at session start. Fewer plugins = leaner ambient context.
 
-# === MARKETPLACES (one-time per machine — safe to run them all) ===
-/plugin marketplace add EveryInc/compound-engineering-plugin
-/plugin marketplace add obra/superpowers-marketplace
-/plugin marketplace add alirezarezvani/claude-skills
-
-# === CORE — install for any project ===
-/plugin install compound-engineering         # /ce-* commands (brainstorm, plan, work, code-review, compound)
-/plugin install superpowers@superpowers-marketplace
+# === Already auto-trusted (declared in .claude/settings.json) ===
+# Marketplaces:
+#   compound-engineering-plugin   (EveryInc/compound-engineering-plugin)
+#   superpowers-marketplace       (obra/superpowers-marketplace)
+#   claude-code-skills            (alirezarezvani/claude-skills)
+# Plugins enabled by default:
+#   compound-engineering@compound-engineering-plugin   # /ce-* commands
+#   superpowers@superpowers-marketplace
 
 # === BUSINESS / PRODUCT — install for product-led projects (B2B, SaaS) ===
 # /plugin install pm-skills@claude-code-skills

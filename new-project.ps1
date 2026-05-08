@@ -84,5 +84,7 @@ Write-Host "Next steps:" -ForegroundColor Yellow
 Write-Host "  1. Edit CLAUDE.md - fill in stack, verification commands, gotchas"
 Write-Host "  2. Edit CLAUDE.local.md (gitignored) - your personal context"
 Write-Host "  3. Open Claude Code in $resolved"
-Write-Host "  4. Paste the /plugin commands from plugins.txt"
+Write-Host "  4. On first launch, click 'Trust' when prompted for the 3 marketplaces"
+Write-Host "     (compound-engineering, superpowers, claude-code-skills) - pre-declared"
+Write-Host "     in .claude/settings.json. Optional plugins live in plugins.txt."
 Write-Host "  5. Run: /start-feature <feature-slug>  (or /fast for trivial fixes)"

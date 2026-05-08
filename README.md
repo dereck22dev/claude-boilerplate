@@ -55,7 +55,7 @@ Token-cost rule of thumb: each skill/agent ≈ 200–500 tokens of description l
 | `WORKFLOW.md`                       | 11-step process + fast lane                                         |
 | `plugins.txt`                       | Annotated `/plugin` commands                                        |
 | `.gitignore`                        | Pre-configured                                                      |
-| `.claude/settings.json`             | Plugins enabled + safe-command allowlist                            |
+| `.claude/settings.json`             | Marketplaces + plugins pre-declared + safe-command allowlist        |
 | `.claude/settings.local.json`       | Empty stub for personal permission additions                        |
 | `.claude/commands/start-feature.md` | `/start-feature <name>` — Phase 1 (95% prompt + spec)               |
 | `.claude/commands/fast.md`          | `/fast <description>` — fast-lane for trivial changes               |

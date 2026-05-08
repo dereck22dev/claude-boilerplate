@@ -2,6 +2,21 @@
   "env": {
     "ENABLE_PLUGINS": "1"
   },
+  "extraKnownMarketplaces": {
+    "compound-engineering-plugin": {
+      "source": { "source": "github", "repo": "EveryInc/compound-engineering-plugin" }
+    },
+    "superpowers-marketplace": {
+      "source": { "source": "github", "repo": "obra/superpowers-marketplace" }
+    },
+    "claude-code-skills": {
+      "source": { "source": "github", "repo": "alirezarezvani/claude-skills" }
+    }
+  },
+  "enabledPlugins": {
+    "compound-engineering@compound-engineering-plugin": true,
+    "superpowers@superpowers-marketplace": true
+  },
   "permissions": {
     "allow": [
       "Read(**)",
